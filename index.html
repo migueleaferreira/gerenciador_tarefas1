@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GERENCIADOR_TAREFAS</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerenciador de Tarefas</h1>
+
+        <form id="form-tarefa">
+            <input type="text" name="titulo" placeholder="Título da tarefa" required>
+            <textarea name="descricao" placeholder="Descrição da tarefa" rows="3" required></textarea>
+            <input type="date" name="prazo" required>
+            <select name="prioridade" required>
+                <option value="" disabled selected>Prioridade</option>
+                <option value="baixa">Baixa</option>
+                <option value="média">Média</option>
+                <option value="alta">Alta</option>
+            </select>
+            <select name="categoria" required>
+                <option value="" disabled selected>Categoria</option>
+                <option value="Trabalho">Trabalho</option>
+                <option value="Estudos">Estudos</option>
+                <option value="Pessoal">Pessoal</option>
+            </select>
+            <button type="submit">Adicionar</button>
+        </form>
+
+        <ul id="lista-tarefas">
+            <!-- Tarefas serão inseridas aqui via JavaScript -->
+        </ul>
+
+        <a href="relatorio.html" class="btn-relatorio">Ver relatório de tarefas pendentes</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

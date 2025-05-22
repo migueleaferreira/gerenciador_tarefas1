@@ -1,0 +1,145 @@
+body {
+    background-color: #e6f2ff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    margin: 0;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    padding: 30px 40px;
+    width: 450px;
+}
+
+h1 {
+    text-align: center;
+    color: #004080;
+    margin-bottom: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="text"], textarea, input[type="date"], select {
+    padding: 10px 14px;
+    border: 2px solid #b3c7ff;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline-offset: 2px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, textarea:focus, input[type="date"]:focus, select:focus {
+    border-color: #4caf50;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: fit-content;
+    align-self: flex-start;
+}
+
+button:hover {
+    background-color: #3a9d3a;
+}
+
+#lista-tarefas {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.tarefa {
+    background-color: #f5faff;
+    border: 1.8px solid #b3c7ff;
+    border-radius: 12px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    box-shadow: 1px 1px 5px rgba(0, 64, 128, 0.1);
+}
+
+.tarefa strong {
+    font-size: 1.1rem;
+    color: #003366;
+}
+
+.barra-progresso {
+    background-color: #d1e7dd;
+    border-radius: 8px;
+    width: 100%;
+    height: 18px;
+    margin: 8px 0 12px 0;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.barra-progresso-fill {
+    background-color: #4caf50;
+    height: 100%;
+    border-radius: 8px;
+    width: 0%;
+    transition: width 0.4s ease;
+}
+
+.acoes {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+form.inline {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+input[type="number"] {
+    width: 65px;
+    padding: 8px;
+    text-align: center;
+}
+
+.btn-relatorio {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    text-decoration: none;
+    background-color: #4caf50;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-relatorio:hover {
+    background-color: #3a9d3a;
+}
+
+.tarefa-concluida {
+    opacity: 0.7;
+}
+
+.tarefa-concluida .barra-progresso-fill {
+    background-color: #2e7d32;
+}

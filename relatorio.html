@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Relatório</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Relatório de Tarefas Pendentes</h1>
+        <div id="relatorio"></div>
+        <a href="index.html" class="btn-relatorio">← Voltar</a>
+    </div>
+
+    <script>
+        const tarefas = JSON.parse(localStorage.getItem('tarefas')) || [];
+        const pendentes = tarefas.filter(t => !t.concluida);
+        
+        document.getElementById('relatorio').innerHTML = pendentes.length > 0 ? `
+            <ul>
+                ${pendentes.map(t => `
+                    <li class="tarefa">
+                        <strong>${t.titulo}</strong>
+                        <p>${t.descricao}</p>
+                        <small>
+                            Prazo: ${t.prazo} | 
+                            Prioridade: ${t.prioridade} | 
+                            Progresso: ${t.progresso}%
+                        </small>
+                    </li>
+                `).join('')}
+            </ul>
+        ` : '<p>Todas as tarefas foram concluídas! 🎉</p>';
+    </script>
+</body>
+</html>
